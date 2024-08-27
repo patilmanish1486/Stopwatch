@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #30b2d0 0%, #fad0c4 100%);
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  h1 {
+    color: #ff6f61;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: popIn 0.8s ease-out;
+  }
+  
+  .stopwatch {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: swing 1.2s ease-in-out infinite alternate;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite;
+  }
+  
+  button:hover {
+    background: #ff9a9e;
+    transform: scale(1.1);
+  }
+  
+  button:active {
+    background: #d96052;
+    transform: scale(1.05);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes swing {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
